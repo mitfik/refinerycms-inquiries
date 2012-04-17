@@ -1,4 +1,4 @@
-class CreateInquiries < ActiveRecord::Migration
+class AddAttachmentField < ActiveRecord::Migration
   def up
     add_column :refinery_inquiries_inquiries, :attachment, :string 
   end

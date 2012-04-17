@@ -1,3 +1,3 @@
-class AttachmetUploader < CarrierWave::Uploader:Base
+class AttachmentUploader < CarrierWave::Uploader::Base
   storage :file
 end

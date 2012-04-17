@@ -70,5 +70,13 @@
         <%= simple_format strip_tags(@inquiry.message), :style => 'margin-top: 0' %>
       </td>
     </tr>
+    <tr>
+      <td valign='top'>
+        <strong><%= t('.attachment') %></strong>
+      </td>
+      <td>
+        <%= link_to @inquiry.attachment, @inquiry.attachment_url %>
+      </td>
+    </tr>
   </table>
 </div>
