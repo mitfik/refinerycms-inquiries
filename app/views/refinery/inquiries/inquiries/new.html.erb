@@ -1,6 +1,6 @@
 <% content_for :body_content_left do %>
   <div class='inquiries'>
-    <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
+          <%= form_for [refinery, :inquiries, @inquiry], :html => {:multipart => true} do |f| %>
       <%= render :partial => "/refinery/admin/error_messages",
                  :locals => {
                    :object => @inquiry,
@@ -21,6 +21,9 @@
       <div class='field message_field'>
         <%= f.required_label :message, :class => 'placeholder-fallback' %>
         <%= f.text_area :message, :rows => 8, :required => 'required', :placeholder => t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') %>
+      </div>
+      <div class='field attachment_field'>
+        <%= f.file_field :attachment %>
       </div>
       <div class="actions">
         <%= f.submit t('.send') %>

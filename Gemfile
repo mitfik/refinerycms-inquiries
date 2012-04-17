@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gemspec
 
 gem 'refinerycms', '~> 2.0.0'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'refinerycms-testing', '~> 2.0.0'

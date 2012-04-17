@@ -22,6 +22,8 @@ module Refinery
         include_spam ? limit(number) : ham.limit(number)
       end
 
+      mount_uploader :attachment, AttachmentUploader
+
     end
   end
 end
