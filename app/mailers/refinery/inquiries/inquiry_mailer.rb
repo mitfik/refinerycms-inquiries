@@ -13,9 +13,9 @@ module Refinery
       def notification(inquiry, request)
         @inquiry = inquiry
         attachments[@inquiry.attachment.to_s] = File.read("./public" + @inquiry.attachment.to_s)
-        mail :subject => Refinery::Inquiries::Setting.notification_subject,
-             :to      => Refinery::Inquiries::Setting.notification_recipients,
-             :from    => "\"#{Refinery::Core.site_name}\" <no-reply@#{request.domain}>"
+        mail :subject   => Refinery::Inquiries::Setting.notification_subject,
+             :to        => Refinery::Inquiries::Setting.notification_recipients,
+             :from      => "\"#{Refinery::Core.site_name}\" <no-reply@#{request.domain}>",
       end
 
     end
