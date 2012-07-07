@@ -16,6 +16,7 @@ module Refinery
         mail :subject   => Refinery::Inquiries::Setting.notification_subject,
              :to        => Refinery::Inquiries::Setting.notification_recipients,
              :from      => "\"#{Refinery::Core.site_name}\" <no-reply@#{request.domain}>",
+             :reply_to  => inquiry.email
       end
 
     end
