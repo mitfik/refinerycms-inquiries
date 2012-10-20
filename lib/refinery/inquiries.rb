@@ -1,6 +1,5 @@
 require 'refinerycms-core'
 require 'refinerycms-settings'
-require 'filters_spam'
 
 module Refinery
   autoload :InquiriesGenerator, 'generators/refinery/inquiries/inquiries_generator'

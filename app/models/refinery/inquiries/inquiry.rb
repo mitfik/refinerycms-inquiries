@@ -1,3 +1,7 @@
+require 'refinery/core/base_model'
+require 'filters_spam'
+require 'acts_as_indexed'
+
 module Refinery
   module Inquiries
     class Inquiry < Refinery::Core::BaseModel
@@ -9,8 +13,8 @@ module Refinery
                    :extra_spam_words => %w()
 
       validates :name, :presence => true
-      validates :message, :presence => true
       validates :email, :format=> { :with =>  /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+      validates :message, :presence => true
 
       acts_as_indexed :fields => [:name, :email, :message, :phone]
 
